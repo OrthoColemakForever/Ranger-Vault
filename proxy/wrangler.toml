@@ -1,0 +1,17 @@
+name = "rangervault-identify"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Swap to "claude-haiku-5-5" for much cheaper (but less accurate) IDs.
+MODEL = "claude-opus-5-5"
+
+# 20 identifications per minute per IP.
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60

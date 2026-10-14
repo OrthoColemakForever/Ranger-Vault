@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "RangerVault",
+    "slug": "rangervault",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "RangerVault uses your camera to photograph wildlife for identification.",
+        "NSLocationWhenInUseUsageDescription": "RangerVault uses your location to figure out which national park you're in and to tag where you spotted each animal."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ece0c8",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "RangerVault uses your camera to photograph wildlife for identification."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ece0c8"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "RangerVault uses your location to figure out which national park you're in and to tag where you spotted each animal."
+        }
+      ]
+    ]
+  }
+}
